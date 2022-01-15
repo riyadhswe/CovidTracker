@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <style>
+        .display-8 {
+            font-weight: 300;
+            font-size: 35px;
+        }
+
+        .color1 {
+            background-color: #2475B0;
+            color: white;
+        }
+
+        .color2 {
+            background-color: #FF3E4D;
+            color: white;
+        }
+
+        .color3 {
+            background-color: #B83227;
+            color: white;
+        }
+
+        .color4 {
+            background-color: #2ecc72;
+            color: white;
+        }
+
+        .color5 {
+            background-color: #26ae60;
+            color: white;
+        }
+    </style>
+    <style>
+        .display-8 {
+            font-weight: 300;
+            font-size: 35px;
+        }
+
+        .display-7 {
+            font-weight: 300;
+            font-size: 45px;
+        }
+
+        .color1 {
+            background-color: #2475B0;
+            color: white;
+        }
+
+        .color2 {
+            background-color: #FF3E4D;
+            color: white;
+        }
+
+        .color3 {
+            background-color: #B83227;
+            color: white;
+        }
+
+        .color4 {
+            background-color: #2ecc72;
+            color: white;
+        }
+
+        .color5 {
+            background-color: #26ae60;
+            color: white;
+        }
+
+        .number {
+            font-weight: 300;
+            font-size: 40px;
+            float: right;
+        }
+    </style>
+
+</head>
+
+<body class="p-3">
+
+    <br>
+    <h1 class="display-7">Covid 19 - Global Data</h1>
+    <small > Last update : {{ Dates }}</small>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card col m-2 color1">
+                <div class="card-body">
+                    <h4 class="card-title">New Confirmed</h4>
+                    <p class="card-text number">{{globalSummary.NewConfirmed}}</p>
+                </div>
+            </div>
+            <div class="card col m-2 color2">
+                <div class="card-body">
+                    <h4 class="card-title">NewDeaths</h4>
+                    <p class="card-text number">{{globalSummary.NewDeaths}}</p>
+                </div>
+            </div>
+            <div class="card col m-2 color3">
+                <div class="card-body">
+                    <h4 class="card-title">Total Deaths</h4>
+                    <p class="card-text number">{{globalSummary.TotalDeaths}}</p>
+                </div>
+            </div>
+            <div class="card col m-2 color4">
+                <div class="card-body">
+                    <h4 class="card-title">New Recovered</h4>
+                    <p class="card-text number">{{globalSummary.NewRecovered}}</p>
+                </div>
+            </div>
+            <div class="card col m-2 color5">
+                <div class="card-body">
+                    <h4 class="card-title">Total Recovered</h4>
+                    <p class="card-text number">{{globalSummary.TotalRecovered}}</p>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+
+    <h1 class="display-7">Covid 19 - Bangladesh Data</h1>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card col m-2 color1">
+                <div class="card-body">
+                    <h4 class="card-title">New Confirmed</h4>
+                    <p class="card-text number">{{countries.13.NewConfirmed}}</p>
+                </div>
+            </div>
+            <div class="card col m-2 color2">
+                <div class="card-body">
+                    <h4 class="card-title">NewDeaths</h4>
+                    <p class="card-text number">{{countries.13.NewDeaths}}</p>
+                </div>
+            </div>
+            <div class="card col m-2 color3">
+                <div class="card-body">
+                    <h4 class="card-title">Total Deaths</h4>
+                    <p class="card-text number">{{countries.13.TotalDeaths}}</p>
+                </div>
+            </div>
+            <div class="card col m-2 color4">
+                <div class="card-body">
+                    <h4 class="card-title">New Recovered</h4>
+                    <p class="card-text number">{{countries.13.NewRecovered}}</p>
+                </div>
+            </div>
+            <div class="card col m-2 color5">
+                <div class="card-body">
+                    <h4 class="card-title">Total Recovered</h4>
+                    <p class="card-text number">{{countries.13.TotalRecovered}}</p>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+
+        <h4 class="border rounded p-3">
+            <div class="display-8">
+              <center>Country Wise Summary </center>
+            </div>
+        </h4>
+        <table class="table color1">
+            <thead>
+                <tr>
+                    <th>Sno.</th>
+                    <th>Country</th>
+                    <th>Total Confirmed</th>
+                    <th>Total Deaths</th>
+                    <th>Total Recovered</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in countries %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{c.Country}}</td>
+                    <td>{{c.TotalConfirmed}}</td>
+                    <td>{{c.TotalDeaths}}</td>
+                    <td>{{c.TotalRecovered}}</td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
